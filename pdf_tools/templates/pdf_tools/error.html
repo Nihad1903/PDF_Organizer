@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="{% static 'pdf_tools/styles.css' %}">
+</head>
+<body>
+    <h1>Error</h1>
+    <p>{{ error }}</p>
+    <a href="{{ request.META.HTTP_REFERER }}" class="button">Try again</a>
+    <a href="{% url 'choice_page' %}" class="button">Back to Home</a>
+</body>
+</html>

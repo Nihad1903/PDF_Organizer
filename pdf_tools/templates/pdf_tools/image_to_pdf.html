@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF</title>
+    <link rel="stylesheet" href="{% static 'pdf_tools/styles.css' %}">
+</head>
+<body>
+    <h1>Convert Images to PDF</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="images">Upload images:</label>
+        <input type="file" name="images" multiple accept="image/*" required>
+        <hr>
+        <button type="submit">Convert to PDF</button>
+    </form>
+    <a href="{% url 'choice_page' %}" class="button">Back to Home</a>
+</body>
+</html>

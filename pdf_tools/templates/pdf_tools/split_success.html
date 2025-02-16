@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Success</title>
+    <link rel="stylesheet" href="{% static 'pdf_tools/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="success-message">
+            <h2>Success!</h2>
+            <p>{{ message }}</p>
+            
+            <div class="actions">
+                <a href="{% url 'download_pdf' %}" class="btn btn-primary">Download Split PDF</a>
+                <a href="{% url 'split_pdfs' %}" class="btn btn-secondary">Split Another PDF</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

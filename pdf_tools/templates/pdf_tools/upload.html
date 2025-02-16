@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDFs</title>
+    <link rel="stylesheet" href="{% static 'pdf_tools/styles.css' %}">
+</head>
+<body>
+    <h1>Upload PDFs to Merge</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="pdfs" multiple accept="application/pdf">
+        <button type="submit">Merge and Download PDFs</button>
+    </form>
+</body>
+</html>

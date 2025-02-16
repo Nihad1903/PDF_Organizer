@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Functionality</title>
+    <link rel="stylesheet" href="{% static 'pdf_tools/styles.css' %}">
+</head>
+<body>
+    <h1>Choose What You Want to Do</h1>
+    <div class="options">
+        <a href="{% url 'merge_pdfs' %}" class="button">Merge PDFs</a>
+        <a href="{% url 'split_pdfs' %}" class="button">Split PDFs</a>
+        <a href="{% url 'image_to_pdf' %}" class="button">Image to PDF</a>
+    </div>
+</body>
+</html>
